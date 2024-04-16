@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe8bbcf-972e-449c-b5f1-864a3d4b45f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/github_actions.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Features/Advance.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Features/Professional.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PageObjects/advance_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PageObjects/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PageObjects/professional_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python/Fundamental.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Run_python.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Steps/advance_steps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Steps/api_steps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Steps/mapping.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Steps/professional_steps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/properties.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/github_actions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/github_actions.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Github-Work-Flow" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -58,7 +46,7 @@
     "Python.Run_python.executor": "Run",
     "Python.api_steps.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Update-branch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -187,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Run_python" />
         <item itemvalue="Python tests.Python tests in api_steps.py" />
+        <item itemvalue="Python.Run_python" />
         <item itemvalue="Python.Fundamental (1)" />
-        <item itemvalue="Python.api_steps" />
         <item itemvalue="Python.Fundamental" />
+        <item itemvalue="Python.api_steps" />
       </list>
     </recent_temporary>
   </component>
