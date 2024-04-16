@@ -25,4 +25,4 @@ jobs:
 
     - name: Run Selenium tests
       run: |
-        python Python/Fundamental.py
+        python Steps/api_steps.py
