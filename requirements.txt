@@ -1,0 +1,5 @@
+selenium==4.19.0
+behave==1.2.6
+toolium==3.1.4
+requests~=2.31.0
+asserts~=0.13.0
