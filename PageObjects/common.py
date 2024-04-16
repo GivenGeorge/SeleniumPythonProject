@@ -46,4 +46,4 @@ class CommonPageObject(PageObject):
         ret = self.utils.get_web_element(el).is_displayed()
         self.logger.info(
             "Element {} is displayed is {}".format(element_name, str(ret)))
-        return ret
+        return self
