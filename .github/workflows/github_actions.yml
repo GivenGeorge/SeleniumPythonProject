@@ -30,6 +30,12 @@ jobs:
         sudo apt-get update
         sudo apt-get install google-chrome-stable
 
+    - name: Download Chrome WebDriver
+      run: |
+        Invoke-WebRequest -Uri "https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_win32.zip" -OutFile chromedriver.zip
+        Expand-Archive -Path chromedriver.zip -DestinationPath .
+        Move-Item -Path chromedriver.exe -Destination $env:USERPROFILE\bin
+
     - name: Run Selenium tests
       run: |
         python Steps/api_steps.py

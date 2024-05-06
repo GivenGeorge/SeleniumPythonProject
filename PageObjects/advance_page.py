@@ -27,25 +27,11 @@ class AdvancePageObject(PageObject):
         self.planets_list = None
         self.back_button = None
         self.config = ConfigParser()
-        self.config.read('C:\\Users\\given\\PycharmProjects\\pythonProject\\config\\properties.cfg')
+        self.config.read('config/properties.cfg')
         self.driver = webdriver.Chrome()
 
     def open(self):
-        # self.driver.get('{}'.format(self.config.get('Test', 'url')))
         self.driver.get(self.config.get('Test', 'url'))
-
-    # def open(self):
-    #     if self.driver is not None:
-    #         self.driver.get('{}'.format(self.config.get('Test', 'url')))
-    #     else:
-    #         print("Error: Webdriver not initialized.")
-
-    # def open(self):
-    #     url = self.config.get('Test', 'url', fallback=None)
-    #     if url and self.driver:
-    #         self.driver.get(url)
-    #         return True
-    #     return False
 
     def sort_by_title(self):
         self.title_header = WebDriverWait(self.driver, 10).until(
@@ -67,7 +53,7 @@ class AdvancePageObject(PageObject):
 
     def click_back_button(self):
         self.back_button = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH,"//a[normalize-space()='Back']")))
+            EC.element_to_be_clickable((By.XPATH, "//a[normalize-space()='Back']")))
         self.back_button.click()
         return self
 
@@ -79,15 +65,12 @@ class AdvancePageObject(PageObject):
     def driver(self, value):
         self._driver = value
 
-
-def planet_not_in_movie(self):
-    self.phantom_menace_link = WebDriverWait(self.driver, 10).until(
-        EC.element_to_be_clickable((By.LINK_TEXT, "The Empire Strikes Back")))
-    self.phantom_menace_link.click()
-    self.planets_list = WebDriverWait(self.driver, 10).until(
-        EC.visibility_of(self.driver.find_element(By.XPATH,
-                                                  "//h1[normalize-space()='The Phantom Menace']"))).text
-    assert "Camino" not in self.planets_list
-    return self
-
-
+    def planet_not_in_movie(self):
+        self.phantom_menace_link = WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((By.LINK_TEXT, "The Empire Strikes Back")))
+        self.phantom_menace_link.click()
+        self.planets_list = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of(self.driver.find_element(By.XPATH,
+                                                      "//h1[normalize-space()='The Phantom Menace']"))).text
+        assert "Camino" not in self.planets_list
+        return self
