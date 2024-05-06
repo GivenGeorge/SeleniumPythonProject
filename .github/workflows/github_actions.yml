@@ -23,18 +23,14 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
 
+    - name: Download Chrome Installer
+      run: |
+        Invoke-WebRequest -Uri "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile "chrome_installer.exe"
+
     - name: Install Chrome
       run: |
-        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-        sudo apt-get update
-        sudo apt-get install google-chrome-stable
+        Start-Process -FilePath "chrome_installer.exe" -ArgumentList "/silent", "/install" -Wait
 
-    - name: Download Chrome WebDriver
-      run: |
-        Invoke-WebRequest -Uri "https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_win32.zip" -OutFile chromedriver.zip
-        Expand-Archive -Path chromedriver.zip -DestinationPath .
-        Move-Item -Path chromedriver.exe -Destination $env:USERPROFILE\bin
 
     - name: Run Selenium tests
       run: |
