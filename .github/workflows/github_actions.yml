@@ -25,11 +25,11 @@ jobs:
 
     - name: Download Chrome Installer
       run: |
-        Invoke-WebRequest -Uri "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile "chrome_installer.exe"
+        curl -O https://dl.google.com/chrome/install/latest/chrome_installer.exe
 
     - name: Install Chrome
       run: |
-        Start-Process -FilePath "chrome_installer.exe" -ArgumentList "/silent", "/install" -Wait
+        sudo dpkg -i chrome_installer.exe
 
 
     - name: Run Selenium tests
