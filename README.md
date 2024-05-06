@@ -1,5 +1,6 @@
 # Star Wars home app
 How to start!
+Clone - https://github.com/MindfulMichaelJames/star-wars/tree/main
 
 **1. Install**
    npm install -g yarn
